@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -27,10 +27,15 @@
     header nav{
       display:flex;
       align-items:center;
-      gap:1.5rem;
-      flex-wrap:wrap;
     }
-    header nav h1{font-size:1.7rem;}
+    header nav h1{
+      font-size:1.7rem;
+    }
+    header nav .links{
+      display:flex;
+      gap:1.5rem;
+      margin-left:auto; /* pushes links to the right */
+    }
     header nav a{
       color:white;
       text-decoration: none;
@@ -39,7 +44,9 @@
       border-radius:4px;
       transition:.2s;
     }
-    header nav a:hover{background:darkgreen;}
+    header nav a:hover{
+      background:darkgreen;
+    }
 
     /* Intro */
     .intro{
@@ -123,11 +130,13 @@
   <header>
     <nav>
       <h1>Lesotho Hub</h1>
-      <a href="home.html">Home</a>
-      <a href="business.html">Business</a>
-      <a href="about.html">About Us</a>
-      <a href="contact us.html">Contact Us</a>
-      <a href="tips.html">Tips</a>
+      <div class="links">
+        <a href="home.html">Home</a>
+        <a href="business.html">Business</a>
+        <a href="about.html">About Us</a>
+        <a href="contact-us.html">Contact Us</a>
+        <a href="tips.html">Tips</a>
+      </div>
     </nav>
   </header>
 
@@ -165,7 +174,7 @@
         <label for="message">Message</label>
         <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
 
-        <button type="click">Submit</button>
+        <button type="submit">Submit</button>
       </form>
     </div>
 

@@ -24,12 +24,15 @@
           }
     header nav{
                 display:flex;
-                align-items:right;
-                gap:1.5rem;
+                justify-content:space-between; /* 👈 pushes heading left and links right */
+                align-items:center;
                 flex-wrap:wrap;
-
               }
     header nav h1{font-size:1.7rem;}
+    header nav .links {
+                  display:flex;
+                  gap:1.5rem;
+                }
     header nav a{
                   color:white;
                   text-decoration:none;
@@ -38,7 +41,6 @@
                   border-radius:4px;
                   transition:.2s;
                   cursor:pointer;
-                  text-align:right;
                 }
     header nav a:hover{
                         background:darkgreen;
@@ -125,11 +127,13 @@
 <header>
   <nav>
     <h1>Lesotho Hub</h1>
-    <a href="home.html">Home</a>
-    <a href="business.html">Business</a>
-    <a href="about.html">About Us</a>
-    <a href="contact us.html">Contact Us</a>
-    <a href="tips.html">Tips</a>
+    <div class="links">
+      <a href="home.html">Home</a>
+      <a href="business.html">Business</a>
+      <a href="about.html">About Us</a>
+      <a href="contact us.html">Contact Us</a>
+      <a href="tips.html">Tips</a>
+    </div>
   </nav> 
 </header>
 
