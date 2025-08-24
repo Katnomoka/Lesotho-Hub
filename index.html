@@ -1,0 +1,373 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Lesotho Hub – Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<style>
+  /* Reset & base */
+  *{
+     margin:0;padding:0;
+     box-sizing:border-box}
+  html,body{height:100%}
+  body{
+    font-family:Arial,Helvetica,sans-serif;
+    color:black;
+    background:whitesmoke;
+    line-height:1.6;
+    display:flex;flex-direction:column;min-height:100vh;
+  }
+
+  /* Header */
+  header{
+            background:forestgreen;
+            color:white;padding:1rem 1.5rem
+        }
+  header nav{ display:flex;
+              align-items:center;
+              gap:1.5rem;
+              flex-wrap:wrap
+            }
+  header nav h1{font-size:1.7rem}
+   header nav a{
+                  color:white;
+                  text-decoration:none;
+                  font-size:1rem;
+                  padding:.4rem .7rem;
+                  border-radius:4px;
+                  transition:.2s;
+                  cursor:pointer;
+                  text-align:right;
+                }
+  header nav a:hover{background:darkgreen}
+
+  main{flex:1 0 auto}
+
+  /* Hero */
+  .hero{
+          background:lightgreen;
+          padding:2.5rem 1rem;
+          text-align:center;
+        }
+  .hero h2{
+            font-size:1.6rem;
+            margin-bottom:.5rem
+          }
+  .hero p{
+            font-size:1rem;
+            color:darkslategray 
+          }
+
+  /* Cards */
+  .categories{
+                display:grid;
+                grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+                gap:1.5rem;
+                max-width:1000px;
+                margin:2.5rem auto;
+                padding:0 1rem;
+              }
+  .card{
+          background:white;
+          border:1px solid lightgray;
+          border-radius:8px;
+          padding:1.5rem;
+          text-align:center;
+        }
+  .card h3{margin-bottom:.5rem}
+  .btn{
+        display:inline-block;
+        margin-top:.8rem;
+        text-decoration:none;
+        color:white;
+        background:forestgreen;
+        padding:.55rem 1rem;
+        border-radius:6px;
+        font-weight:600
+      }
+  .btn:hover{background:darkgreen}
+
+  /* Lightbox */
+  .lightbox{
+              position:fixed;
+              inset:0;display:none;
+              place-items:center;
+              background:rgba(0,0,0,.5);
+              padding:1rem;z-index:1000;
+            }
+  .lightbox:target{display:grid}
+
+  .farmer-card{
+                width:min(560px,92vw);
+                background:white;border-radius:14px;border:1px solid lightgray;
+                box-shadow:0 10px 30px rgba(0,0,0,.15);
+                overflow:hidden;
+              }
+  .farmer-header{
+    background:forestgreen;
+    color:white;
+    padding:1rem 1.25rem;
+    display:flex;
+    justify-content:space-between;
+    align-items:center
+  }
+  .farmer-body{
+                padding:1rem 1.25rem;
+                display:grid;gap:.5rem
+              }
+  .farmer-body p{margin:.15rem 0}
+  .badge{
+          display:inline-block;
+          background:honeydew;
+          color:darkgreen;
+          border:1px solid lightgray;
+          border-radius:999px;
+          padding:.15rem .6rem;
+          font-size:.85rem;
+          margin-right:.35rem}
+
+  .controls{
+              display:flex;
+              justify-content:space-between;
+              align-items:center;
+              padding:1rem 1.25rem;
+              border-top:1px solid lightgray;
+              background:whitesmoke;
+            }
+  .ctrl{
+          text-decoration:none;
+          border:1px solid lightgray;
+          border-radius:10px;
+          padding:.5rem .9rem;
+          font-weight:600;color:black
+  }
+  .ctrl:hover{background:gainsboro}
+  .close{
+          margin-left:auto;
+          margin-right:.25rem;
+          background:black;
+          color:white;
+          border-color:black;
+        }
+  .close:hover{background:dimgray}
+  .hint{
+          font-size:.86rem;
+          color:dimgray;
+          margin-left:.5rem;
+        }
+
+  /* Footer */
+  footer{
+          background:forestgreen;
+          color:white;
+          text-align:center;
+          padding:1rem;
+          font-size:.9rem;
+          margin-top:0;
+          flex-shrink:0,
+        }
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1>Lesotho Hub</h1>
+    <a href="home.html">Home</a>
+    <a href="business.html">Business</a>
+    <a href="about.html">About Us</a>
+    <a href="contact-us.html">Contact Us</a>
+    <a href="tips.html">Tips</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h2>Welcome to Lesotho Hub</h2>
+    <p>The one-stop place where Basotho farmers advertise their fresh produce and you find the best local prices.</p>
+  </section>
+
+  <section class="categories">
+    <div class="card">
+      <h3>Crop Farmers</h3>
+      <p>Maize, sorghum, wheat</p>
+      <a class="btn" href="#crop-f1">View Farmers</a>
+    </div>
+
+    <div class="card">
+      <h3>Livestock Farmers</h3>
+      <p>Cattle, sheep, goats</p>
+      <a class="btn" href="#live-f1">View Farmers</a>
+    </div>
+
+    <div class="card">
+      <h3>Vegetable Farmers</h3>
+      <p>Spinach &amp; cabbage...</p>
+      <a class="btn" href="#veg-f1">View Farmers</a>
+    </div>
+
+    <div class="card">
+      <h3>Poultry Farmers</h3>
+      <p>Chicken, eggs, ducks</p>
+      <a class="btn" href="#poul-f1">View Farmers</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; 2025 Lesotho Hub. All rights reserved.
+</footer>
+
+<!-- CROP FARMERS -->
+<section id="crop-f1" class="lightbox">
+  <article class="farmer-card">
+    <div class="farmer-header">
+      <h3>‘M’e Palesa — Crop Farmer</h3>
+      <span class="badge">Maseru Rural</span>
+    </div>
+    <div class="farmer-body">
+      <p><strong>Produce:</strong> Maize, Sorghum</p>
+      <p><strong>Price:</strong> M260 per 50kg bag</p>
+      <p><strong>Contact:</strong> 58 123 456</p>
+    </div>
+    <div class="controls">
+      <a class="ctrl close" href="#close">Close</a>
+      <a class="ctrl" href="#crop-f2">Next ›</a>
+    </div>
+  </article>
+</section>
+
+<section id="crop-f2" class="lightbox">
+  <article class="farmer-card">
+    <div class="farmer-header">
+      <h3>Ntate Teboho — Crop Farmer</h3>
+      <span class="badge">Butha-Buthe</span>
+    </div>
+    <div class="farmer-body">
+      <p><strong>Produce:</strong> Wheat</p>
+      <p><strong>Price:</strong> M140 per 25kg</p>
+      <p><strong>Contact:</strong> 59 987 654</p>
+    </div>
+    <div class="controls">
+      <a class="ctrl" href="#crop-f1">‹ Prev</a>
+      <a class="ctrl close" href="#close">Close</a>
+    </div>
+  </article>
+</section>
+
+<!-- LIVESTOCK FARMERS -->
+<section id="live-f1" class="lightbox">
+  <article class="farmer-card">
+    <div class="farmer-header">
+      <h3>Ntate Retselisitsoe — Livestock</h3>
+      <span class="badge">Quthing</span>
+    </div>
+    <div class="farmer-body">
+      <p><strong>Animals:</strong> Sheep, Goats</p>
+      <p><strong>Price:</strong> From M950 (goat)</p>
+      <p><strong>Contact:</strong> 58 321 000</p>
+    </div>
+    <div class="controls">
+      <a class="ctrl close" href="#close">Close</a>
+      <a class="ctrl" href="#live-f2">Next ›</a>
+    </div>
+  </article>
+</section>
+
+<section id="live-f2" class="lightbox">
+  <article class="farmer-card">
+    <div class="farmer-header">
+      <h3>‘M’e Mpho — Livestock</h3>
+      <span class="badge">Mohale’s Hoek</span>
+    </div>
+    <div class="farmer-body">
+      <p><strong>Animals:</strong> Cattle (weaners)</p>
+      <p><strong>Price:</strong> Call for auction rates</p>
+      <p><strong>Contact:</strong> 56 222 333</p>
+    </div>
+    <div class="controls">
+      <a class="ctrl" href="#live-f1">‹ Prev</a>
+      <a class="ctrl close" href="#close">Close</a>
+    </div>
+  </article>
+</section>
+
+<!-- VEGETABLE FARMERS -->
+<section id="veg-f1" class="lightbox">
+  <article class="farmer-card">
+    <div class="farmer-header">
+      <h3>‘M’e Thato — Vegetables</h3>
+      <span class="badge">Maseru Urban</span>
+    </div>
+    <div class="farmer-body">
+      <p><strong>Produce:</strong> Spinach, Cabbage</p>
+      <p><strong>Price:</strong> Spinach M15/bunch</p>
+      <p><strong>Contact:</strong> 57 444 555</p>
+    </div>
+    <div class="controls">
+      <a class="ctrl close" href="#close">Close</a>
+      <a class="ctrl" href="#veg-f2">Next ›</a>
+    </div>
+  </article>
+</section>
+
+<section id="veg-f2" class="lightbox">
+  <article class="farmer-card">
+    <div class="farmer-header">
+      <h3>Ntate Lesaoana — Vegetables</h3>
+      <span class="badge">Maputsoe</span>
+    </div>
+    <div class="farmer-body">
+      <p><strong>Produce:</strong> Carrots, Onions</p>
+      <p><strong>Price:</strong> Carrots M20/kg</p>
+      <p><strong>Contact:</strong> 59 666 777</p>
+    </div>
+    <div class="controls">
+      <a class="ctrl" href="#veg-f1">‹ Prev</a>
+      <a class="ctrl close" href="#close">Close</a>
+    </div>
+  </article>
+</section>
+
+<!-- POULTRY FARMERS -->
+<section id="poul-f1" class="lightbox">
+  <article class="farmer-card">
+    <div class="farmer-header">
+      <h3>‘M’e Nthabiseng — Poultry</h3>
+      <span class="badge">Roma</span>
+    </div>
+    <div class="farmer-body">
+      <p><strong>Products:</strong> Broilers, Eggs (tray)</p>
+      <p><strong>Price:</strong> Eggs M55/tray</p>
+      <p><strong>Contact:</strong> 58 999 000</p>
+    </div>
+    <div class="controls">
+      <a class="ctrl close" href="#close">Close</a>
+      <a class="ctrl" href="#poul-f2">Next ›</a>
+    </div>
+  </article>
+</section>
+
+<section id="poul-f2" class="lightbox">
+  <article class="farmer-card">
+    <div class="farmer-header">
+      <h3>Ntate Pheello — Poultry</h3>
+      <span class="badge">Hlotse</span>
+    </div>
+    <div class="farmer-body">
+      <p><strong>Products:</strong> Free-range chickens</p>
+      <p><strong>Price:</strong> From M90 each</p>
+      <p><strong>Contact:</strong> 56 111 222</p>
+    </div>
+    <div class="controls">
+      <a class="ctrl" href="#poul-f1">‹ Prev</a>
+      <a class="ctrl close" href="#close">Close</a>
+    </div>
+  </article>
+</section>
+
+<!-- Dummy anchor to clear :target -->
+<div id="close"></div>
+
+</body>
+</html>

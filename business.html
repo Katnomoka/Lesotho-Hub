@@ -1,0 +1,186 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesotho Hub – Business Page</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,Helvetica,sans-serif;
+      color:black;
+     }
+
+    body{
+          background:whitesmoke;
+          line-height:1.5;
+        }
+
+    header{
+            background:forestgreen;
+            color:white;
+            padding:1rem 1.5rem;
+          }
+    header nav{
+                display:flex;
+                align-items:right;
+                gap:1.5rem;
+                flex-wrap:wrap;
+
+              }
+    header nav h1{font-size:1.7rem;}
+    header nav a{
+                  color:white;
+                  text-decoration:none;
+                  font-size:1rem;
+                  padding:.4rem .7rem;
+                  border-radius:4px;
+                  transition:.2s;
+                  cursor:pointer;
+                  text-align:right;
+                }
+    header nav a:hover{
+                        background:darkgreen;
+                        margin-bottom: 5px;
+                      }
+
+    .intro{
+      background:lightgreen;
+      padding:2rem 1rem;
+      text-align:center;
+    }
+    .intro h2{
+      font-size:1.6rem;
+      margin-bottom:.3rem;
+    }
+    .intro p{color:darkcyan;}
+
+    .products{
+                display:grid;
+                grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+                gap:1.5rem;
+                max-width:1000px;
+                margin:2rem auto;
+                padding:0 1rem;
+              }
+    .card{
+            background:white;
+            border:1px solid lightgray;
+            border-radius:8px;
+            padding:1rem;
+            text-align:center;
+            box-shadow:0px 2px 6px gray;
+          }
+    
+    .card h3{margin:.7rem 0 .4rem;}
+    .card p{margin:.3rem 0;}
+    .price{
+            color:darkorange;
+            font-weight:bold;
+            margin:.5rem 0;
+          }
+
+    details summary {
+                      background:forestgreen;
+                      color:white;
+                      padding:.5rem 1rem;
+                      border-radius:4px;
+                      cursor:pointer;
+                      list-style:none;
+                      text-align:center;
+                      font-weight:bold;
+                      transition:.2s;
+                    }
+    details summary:hover {
+                            background:darkgreen;
+                          }
+    details[open] summary {
+                            border-bottom-left-radius:0;
+                            border-bottom-right-radius:0;
+                          }
+    details p {
+                background: royalblue;
+                padding:.5rem;
+                margin:0;
+                border:1px solid lightgray;
+                border-top:none;
+                border-radius:0 0 4px 4px;
+                color:darkgray;
+                font-weight:bold;
+              }
+
+    footer{
+            background:forestgreen;
+            color:white;
+            text-align:center;
+            padding:1rem;
+            margin-top:10rem;
+            font-size:.9rem;
+          }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <h1>Lesotho Hub</h1>
+    <a href="home.html">Home</a>
+    <a href="business.html">Business</a>
+    <a href="about.html">About Us</a>
+    <a href="contact us.html">Contact Us</a>
+    <a href="tips.html">Tips</a>
+  </nav> 
+</header>
+
+<section class="intro">
+  <h3>Livestock and soil farming in Lesotho</h3>
+</section>
+
+<section class="products">
+  <div class="card">
+    <h4>Sorghum</h4>
+    <p>By:Sthabi Farm</p>
+    <p class="price">M50 per bag</p>
+    <details>
+      <summary>Contact Farmer</summary>
+      <p>+266 5001 2345</p>
+    </details>
+  </div>
+
+  <div class="card">
+     <h4>Tomatoes</h4>
+    <p>By:Lerato Greenhouse</p>
+    <p class="price">M30 per box</p>
+    <details>
+      <summary>Contact Farmer</summary>
+      <p>+266 5802 6789</p>
+    </details>
+  </div>
+
+  <div class="card">
+     <h4>Sheeps</h4>
+    <p>By:Thabo’s Farm</p>
+    <p class="price">M2000 each</p>
+    <details>
+      <summary>Contact Farmer</summary>
+      <p>+266 5903 1122</p>
+    </details>
+  </div>
+
+  <div class="card">
+     <h4>Poultry</h4>
+    <p>By:Palesa’s Poultry</p>
+    <p class="price">M45 per tray</p>
+    <details>
+      <summary>Contact Farmer</summary>
+      <p>+266 6204 4455</p>
+    </details>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 Lesotho Hub. All rights reserved.
+</footer>
+</body>
+</html>

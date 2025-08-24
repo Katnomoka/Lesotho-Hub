@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesotho Hub – Contact Us</title>
+  <style>
+    /* Basic reset */
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial,Helvetica,sans-serif;
+      color:black;
+    }
+
+    body{
+      background:whitesmoke;
+      line-height:1.6;
+    }
+
+    /* Header & Navigation */
+    header{
+      background:forestgreen;
+      color:white;
+      padding:1rem 1.5rem;
+    }
+    header nav{
+      display:flex;
+      align-items:center;
+      gap:1.5rem;
+      flex-wrap:wrap;
+    }
+    header nav h1{font-size:1.7rem;}
+    header nav a{
+      color:white;
+      text-decoration: none;
+      font-size:1rem;
+      padding:.4rem .7rem;
+      border-radius:4px;
+      transition:.2s;
+    }
+    header nav a:hover{background:darkgreen;}
+
+    /* Intro */
+    .intro{
+      background:lightgreen;
+      padding:2rem 1rem;
+      text-align:center;
+    }
+    .intro h2{
+      font-size:1.8rem;
+      margin-bottom:.5rem;
+    }
+    .intro p{color:darkslategray;}
+
+    /* Contact section */
+    .contact-container{
+      max-width:900px;
+      margin:2rem auto;
+      padding:0 1rem;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:2rem;
+    }
+    .contact-info, .contact-form{
+      background:white;
+      border:1px solid lightgray;
+      border-radius:8px;
+      padding:1.5rem;
+      box-shadow:0px 2px 6px gray;
+    }
+    .contact-info h3, .contact-form h3{
+      color:forestgreen;
+      margin-bottom:1rem;
+    }
+    .contact-info p{
+      margin:.5rem 0;
+    }
+
+    /* Form */
+    form{
+      display:flex;
+      flex-direction:column;
+    }
+    label{margin:.5rem 0 .2rem;}
+    input, textarea{
+      padding:.6rem;
+      border:1px solid gray;
+      border-radius:4px;
+      margin-bottom:.8rem;
+    }
+    textarea{resize:vertical; min-height:120px;}
+    button{
+      background:forestgreen;
+      color:white;
+      border:none;
+      padding:.7rem;
+      border-radius:4px;
+      cursor:pointer;
+      transition:.2s;
+    }
+    button:hover{background:darkgreen;}
+
+    /* Footer */
+    footer{
+      background:forestgreen;
+      color:white;
+      text-align:center;
+      padding:1rem;
+      margin-top:3rem;
+      font-size:.9rem;
+    }
+
+    /* Mobile */
+    @media(max-width:768px){
+      .contact-container{grid-template-columns:1fr;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <h1>Lesotho Hub</h1>
+      <a href="home.html">Home</a>
+      <a href="business.html">Business</a>
+      <a href="about.html">About Us</a>
+      <a href="contact us.html">Contact Us</a>
+      <a href="tips.html">Tips</a>
+    </nav>
+  </header>
+
+  <!-- Intro -->
+  <section class="intro">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Get in touch with us below.</p>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact-container">
+
+    <!-- Info -->
+    <div class="contact-info">
+      <h3>Our Contact Information</h3>
+      <p>📌 Location: Maseru, Lesotho</p>
+      <p>📲 Phone: +266 62131909</p>
+      <p>📩 Email: info@lesothohub.com</p>
+      <p>⏲️ Working Hours: Mon – Sat, 8AM – 6PM</p>
+    </div>
+
+    <!-- Form -->
+    <div class="contact-form">
+      <h3>Send us a message</h3>
+      <form action="#" method="post">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="subject">Subject</label>
+        <input type="text" id="subject" name="subject" placeholder="Enter subject" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+        <button type="click">Submit</button>
+      </form>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Lesotho Hub. All rights reserved.
+  </footer>
+
+</body>
+</html>
